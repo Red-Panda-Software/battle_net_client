@@ -1,5 +1,7 @@
 # BattleNetClient
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/URPVZ2xXtM9GM9Vk6Mkjpu/HyEpNNKmgmUVxYTRA9RL4f/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/URPVZ2xXtM9GM9Vk6Mkjpu/HyEpNNKmgmUVxYTRA9RL4f/tree/master)
+
 This is a Ruby client to communicate with the Battle.net API endpoints
 release by Blizzard Entertainment.
 
