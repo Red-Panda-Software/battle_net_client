@@ -23,9 +23,11 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-      - name: Write .env file
-        run: |
-          echo "BATTLE_NET_CLIENT_ID=${{ secrets.BATTLE_NET_CLIENT_ID }}" >> .env.test
-          echo "BATTLE_NET_CLIENT_SECRET=${{ secrets.BATTLE_NET_CLIENT_SECRET }}" >> .env.test
       - name: Run the default task
-        run: bundle exec rake
+        with:
+          BATTLE_NET_CLIENT_SECRET: ${{ secrets.BATTLE_NET_CLIENT_SECRET }}
+          BATTLE_NET_CLIENT_ID: ${{ secrets.BATTLE_NET_CLIENT_ID }}
+        run: |
+          export BATTLE_NET_CLIENT_SECRET=${{ secrets.BATTLE_NET_CLIENT_SECRET }} &&
+          export BATTLE_NET_CLIENT_ID=${{ secrets.BATTLE_NET_CLIENT_ID }} &&
+          bundle exec rake
