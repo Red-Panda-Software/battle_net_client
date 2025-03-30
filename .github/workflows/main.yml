@@ -24,7 +24,7 @@ jobs:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
       - name: Run the default task
-        run: bundle exec rake
-        env:
-          BATTLE_NET_CLIENT_ID: ${{ secrets.BATTLE_NET_CLIENT_ID }}
-          BATTLE_NET_CLIENT_SECRET: ${{ secrets.BATTLE_NET_CLIENT_SECRET }}
+        run: |
+          export BATTLE_NET_CLIENT_ID=${{ secrets.BATTLE_NET_CLIENT_ID }} &&
+          export BATTLE_NET_CLIENT_SECRET=${{ secrets.BATTLE_NET_CLIENT_SECRET }} &&
+          bundle exec rake

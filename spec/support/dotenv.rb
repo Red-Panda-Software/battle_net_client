@@ -10,4 +10,5 @@
 #   * .env.test.local
 #   * .env.local
 # The first matching pair that's found will be loaded into the ENV.
-Dotenv.load('.env.test', '.env.test.local', '.env.local')
+require 'dotenv'
+Dotenv.load('.env.test')

@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-# Require global gems as needed
-require 'dotenv/load'
-
 # Require and configure Zeitwerk for autoloading our code
 require 'zeitwerk'
 
