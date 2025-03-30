@@ -27,7 +27,7 @@ jobs:
         with:
           BATTLE_NET_CLIENT_SECRET: ${{ secrets.BATTLE_NET_CLIENT_SECRET }}
           BATTLE_NET_CLIENT_ID: ${{ secrets.BATTLE_NET_CLIENT_ID }}
-        run: |
+        run:
           export BATTLE_NET_CLIENT_SECRET=${{ secrets.BATTLE_NET_CLIENT_SECRET }} &&
           export BATTLE_NET_CLIENT_ID=${{ secrets.BATTLE_NET_CLIENT_ID }} &&
           bundle exec rake
