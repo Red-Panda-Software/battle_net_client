@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://us.battle.net/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      Authorization:
+      - Basic d3JvbmdfY2xpZW50X2lkOndyb25nX2NsaWVudF9zZWNyZXQ=
+      User-Agent:
+      - Faraday v2.12.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 401
+      message: ''
+    headers:
+      date:
+      - Sun, 30 Mar 2025 22:24:55 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      retry-after:
+      - '600'
+      content-type:
+      - application/json
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      cache-control:
+      - no-store
+      pragma:
+      - no-cache
+      www-authenticate:
+      - Bearer realm="Blizzard OAuth", error="unauthorized", error_description="Bad
+        credentials"
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":"unauthorized","error_description":"Bad credentials"}'
+  recorded_at: Sun, 30 Mar 2025 22:24:55 GMT
+recorded_with: VCR 6.3.1

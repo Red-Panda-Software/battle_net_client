@@ -25,3 +25,6 @@ jobs:
           bundler-cache: true
       - name: Run the default task
         run: bundle exec rake
+        env:
+          BATTLE_NET_CLIENT_ID: ${{ secrets.BATTLE_NET_CLIENT_ID }}
+          BATTLE_NET_CLIENT_SECRET: ${{ secrets.BATTLE_NET_CLIENT_SECRET }}

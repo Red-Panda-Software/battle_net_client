@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://us.battle.net/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      Authorization:
+      - "<BASIC_AUTH>"
+      User-Agent:
+      - Faraday v2.12.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Sun, 30 Mar 2025 22:24:55 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      retry-after:
+      - '600'
+      content-type:
+      - application/json;charset=UTF-8
+      vary:
+      - Origin,Accept-Encoding,Access-Control-Request-Method,Access-Control-Request-Headers
+      cache-control:
+      - no-store
+      pragma:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-length:
+      - '145'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"USo3ttJG5Bxqb50YfhLVZ8JvF4UIOO9TXL","token_type":"bearer","expires_in":86399,"sub":"<CLIENT_ID>"}'
+  recorded_at: Sun, 30 Mar 2025 22:24:55 GMT
+recorded_with: VCR 6.3.1
