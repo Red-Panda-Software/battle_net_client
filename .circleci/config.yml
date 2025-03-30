@@ -9,7 +9,7 @@ jobs:
       - checkout
       - ruby/install-deps
       - run:
-          name: rake test
+          name: RSpec & RuboCop
           command: bundle exec rake
   deploy:
     docker:
