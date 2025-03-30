@@ -10,14 +10,14 @@ jobs:
       - ruby/install-deps
       - run:
           name: rake test
-          command: bundle exec rake test
+          command: bundle exec rake
   deploy:
     docker:
       - image: cimg/base:stable
     steps:
       - run:
           name: deploy
-          command: '#e.g. ./deploy.sh'
+          command: 'echo "Skipping"'
 workflows:
   build-and-test:
     jobs:
