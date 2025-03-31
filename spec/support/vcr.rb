@@ -17,4 +17,5 @@ VCR.configure do |config|
     client_secret = ENV.fetch('BATTLE_NET_CLIENT_SECRET', nil)
     "Basic #{Base64.strict_encode64("#{client_id}:#{client_secret}")}"
   end
+  config.filter_sensitive_data('<HTTP_AUTHORIZATION>') { /Bearer [a-zA-Z0-9\-_]+/ }
 end

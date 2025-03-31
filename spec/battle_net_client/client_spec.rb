@@ -10,8 +10,8 @@ RSpec.describe BattleNetClient::Client, :vcr do
         client.client_secret = ENV.fetch('BATTLE_NET_CLIENT_SECRET', nil)
       end
 
-      it 'returns a valid access token' do
-        expect(client.access_token).to be_a(String)
+      it 'returns a valid access token object' do
+        expect(client.access_token).to be_a(BattleNetClient::Models::AccessToken)
       end
     end
 

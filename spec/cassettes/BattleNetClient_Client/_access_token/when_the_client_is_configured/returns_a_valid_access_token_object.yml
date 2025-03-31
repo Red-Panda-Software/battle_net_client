@@ -9,6 +9,8 @@ http_interactions:
     headers:
       Authorization:
       - "<BASIC_AUTH>"
+      Accept:
+      - application/json
       User-Agent:
       - Faraday v2.12.2
       Content-Type:
@@ -19,7 +21,7 @@ http_interactions:
       message: ''
     headers:
       date:
-      - Sun, 30 Mar 2025 22:24:55 GMT
+      - Mon, 31 Mar 2025 00:13:01 GMT
       server:
       - Apache
       x-frame-options:
@@ -36,10 +38,10 @@ http_interactions:
       - no-cache
       content-encoding:
       - gzip
-      content-length:
-      - '145'
+      transfer-encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: '{"access_token":"USo3ttJG5Bxqb50YfhLVZ8JvF4UIOO9TXL","token_type":"bearer","expires_in":86399,"sub":"<CLIENT_ID>"}'
-  recorded_at: Sun, 30 Mar 2025 22:24:55 GMT
+  recorded_at: Mon, 31 Mar 2025 00:13:01 GMT
 recorded_with: VCR 6.3.1
