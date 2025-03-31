@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://eu.api.blizzard.com/data/wow/achievement/index?locale=en_US&namespace=static-eu
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.12.2
+      Authorization:
+      - 'Bearer '
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      date:
+      - Mon, 31 Mar 2025 01:28:47 GMT
+      content-length:
+      - '0'
+      connection:
+      - keep-alive
+      x-trace-traceid:
+      - 48bc97cb-c701-39f5-8b9d-505b26684e9a
+      traceparent:
+      - 00-2be77e62722c9300609951e2fc6b9a65-07a356eb3a6bde80-01
+      x-trace-spanid:
+      - 1831a49c-9176-90e2-a69b-4e6eb01330de
+      x-trace-parentspanid:
+      - 1831a49c-9176-90a2-a69b-4e6eb01330de
+      x-frame-options:
+      - SAMEORIGIN
+      x-content-type-options:
+      - nosniff
+      server:
+      - blizzard
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 31 Mar 2025 01:28:47 GMT
+recorded_with: VCR 6.3.1
