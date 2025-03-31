@@ -3,8 +3,10 @@ module BattleNetClient
     BATTLE_NET_BASE_URL: String
     BATTLE_NET_OAUTH_URL: String
     BATTLE_NET_OAUTH_PAYLOAD: String
+    BATTLE_NET_USER_INFO_URL: String
 
     def access_token: () -> String | () -> nil
     def config: () -> ::ActiveSupport::Configuration
+    def user_info: (access_token: String | nil) -> UserInfo
   end
 end

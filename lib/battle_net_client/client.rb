@@ -23,6 +23,7 @@ module BattleNetClient
     BATTLE_NET_BASE_URL = 'https://us.battle.net'
     BATTLE_NET_OAUTH_URL = '/oauth/token'
     BATTLE_NET_OAUTH_PAYLOAD = 'grant_type=client_credentials'
+    BATTLE_NET_USER_INFO_URL = '/oauth/userinfo'
 
     config_accessor :client_id, :client_secret, :region, :locale
 
@@ -30,12 +31,14 @@ module BattleNetClient
       return nil if client_id.blank? || client_secret.blank?
 
       credentials = Base64.strict_encode64("#{config.client_id}:#{config.client_secret}")
-      headers = { 'Authorization' => "Basic #{credentials}" }
+      headers = { 'Authorization' => "Basic #{credentials}", 'Accept' => 'application/json' }
       connection = Faraday.new(url: BATTLE_NET_BASE_URL, headers:)
       response = connection.post(BATTLE_NET_OAUTH_URL) { |req| req.body = BATTLE_NET_OAUTH_PAYLOAD }
       json = Oj.load(response.body, symbol_keys: true)
 
-      json[:access_token]
+      BattleNetClient::Models::AccessToken.new(**json)
+    rescue Dry::Struct::Error
+      nil
     end
   end
 end

@@ -1,0 +1,13 @@
+module BattleNetClient
+  module Models
+    class AccessToken < Dry::Types
+      DEFAULT_SCOPE: String
+
+      def access_token: () -> String
+      def expires_in: () -> Integer
+      def token_type: () -> String
+      def scope: () -> String
+      def sub: () -> String
+    end
+  end
+end
