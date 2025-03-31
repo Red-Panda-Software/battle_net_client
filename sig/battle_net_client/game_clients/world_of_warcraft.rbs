@@ -1,0 +1,17 @@
+module BattleNetClient
+  module GameClients
+    class WorldOfWarcraft
+      ACHIEVEMENTS_URL: String
+
+      def achievements: (access_token: String) -> [::BattleNetClient::Models::Achievement]
+
+      private
+
+      def achievement_url: () -> String
+
+      def static_parameters: () -> Hash[Symbol, String]
+
+      def headers: () -> Hash[String, String]
+    end
+  end
+end

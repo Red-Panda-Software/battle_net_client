@@ -1,0 +1,8 @@
+module BattleNetClient
+  module Models
+    class Achievement < ::Dry::Struct
+      def id: () -> ::Integer
+      def name: () -> String
+    end
+  end
+end
