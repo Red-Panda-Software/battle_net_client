@@ -1,0 +1,7 @@
+module BattleNetClient
+  module GameClients
+    @world_of_warcraft: WorldOfWarcraft
+
+    def world_of_warcraft: () -> GameClients::WorldOfWarcraft
+  end
+end

@@ -44,3 +44,7 @@ client.config.client_secret = ENV['CLIENT_SECRET']
 client.access_token
 #<BattleNetClient::Models::AccessToken access_token="<ACCESS_TOKEN>" expires_in=86399 scope="openid" sub="<CLIENT_ID>" token_type="bearer">
 ```
+
+## Game Data Endpoints
+
+* [World of Warcraft](games/world_of_warcraft.md)

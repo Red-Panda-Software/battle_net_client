@@ -17,19 +17,19 @@ http_interactions:
       message: Unauthorized
     headers:
       date:
-      - Mon, 31 Mar 2025 01:28:47 GMT
+      - Mon, 31 Mar 2025 03:15:48 GMT
       content-length:
       - '0'
       connection:
       - keep-alive
       x-trace-traceid:
-      - 48bc97cb-c701-39f5-8b9d-505b26684e9a
+      - b48de1a6-1706-33a2-9151-53246eb3e23c
       traceparent:
-      - 00-2be77e62722c9300609951e2fc6b9a65-07a356eb3a6bde80-01
+      - 00-77d80ae5326ea7fb3c4b2aa6b30a5e32-5c1d3205691e1eee-01
       x-trace-spanid:
-      - 1831a49c-9176-90e2-a69b-4e6eb01330de
+      - 1831a49c-f80f-9cd0-e37f-2a0ff5b6a928
       x-trace-parentspanid:
-      - 1831a49c-9176-90a2-a69b-4e6eb01330de
+      - 1831a49c-f80f-9c90-e37f-2a0ff5b6a928
       x-frame-options:
       - SAMEORIGIN
       x-content-type-options:
@@ -39,5 +39,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Mon, 31 Mar 2025 01:28:47 GMT
+  recorded_at: Mon, 31 Mar 2025 03:15:48 GMT
 recorded_with: VCR 6.3.1

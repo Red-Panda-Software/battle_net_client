@@ -19,7 +19,7 @@ module BattleNetClient
   # included modules that contain the required access logic.
   class Client
     include ActiveSupport::Configurable
-    include WorldOfWarcraft
+    include GameClients
 
     BATTLE_NET_BASE_URL = 'https://us.battle.net'
     BATTLE_NET_OAUTH_URL = '/oauth/token'
@@ -42,10 +42,6 @@ module BattleNetClient
       BattleNetClient::Models::AccessToken.new(**json)
     rescue Dry::Struct::Error
       nil
-    end
-
-    def parse_response(response)
-      ::Oj.load(response.body, symbol_keys: true)
     end
   end
 end
