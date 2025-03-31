@@ -42,5 +42,5 @@ client.config.client_id = ENV['CLIENT_ID']
 client.config.client_secret = ENV['CLIENT_SECRET']
 
 client.access_token
-"USo3ttJG5Bxqb50YfhLVZ8JvF4UIOO9TXL" # These are time-bound.
+#<BattleNetClient::Models::AccessToken access_token="<ACCESS_TOKEN>" expires_in=86399 scope="openid" sub="<CLIENT_ID>" token_type="bearer">
 ```
